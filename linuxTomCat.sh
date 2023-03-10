@@ -3,7 +3,7 @@
 echo -e "-------------------\n Starting TomCat Installing  \n-------------------"
 sleep 5
 
-yum update -y
+apt update -y
 
 #install java 11
 
@@ -12,7 +12,7 @@ echo -e "-------------------\n Installing Java  \n-------------------"
 sleep 5
 
 
-yum install java-11-openjdk-devel -y #tar.gz
+apt install java-11-openjdk-devel -y #tar.gz
 
 java -version
 
@@ -22,21 +22,21 @@ echo -e "-------------------\n Installing Tomcat  \n-------------------"
 sleep 5
 
 
-yum install wget -y
+apt install wget -y
 
-wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz 
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.72/bin/apache-tomcat-9.0.72.tar.gz 
 
 ls -l 
 
 echo -e "--------------------------------\n"
 
-tar -xzvf apache-tomcat-9.0.71.tar.gz -C /opt/
+tar -xzvf apache-tomcat-9.0.72.tar.gz -C /opt/
 
 #move to file
 
 cd /opt
 
-mv apache-tomcat-9.0.71/ tomcat
+mv apache-tomcat-9.0.72/ tomcat
 
 echo -e "-------------------\n Making grupos  \n-------------------"
 sleep 5
